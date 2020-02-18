@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import unittest
+from fractions import Fraction
 from my_sum import sum
 
 class TestSum(unittest.TestCase):
@@ -11,6 +12,14 @@ class TestSum(unittest.TestCase):
         data = [1, 2, 3]    # prepare the input
         result = sum(data)
         self.assertEqual(result, 6, "it should be 6")
+
+    def test_list_fraction(self):
+        """
+        Test that it can sum a list of fractions
+        """
+        data = [Fraction(1, 4), Fraction(1, 4), Fraction(2, 4)]
+        result = sum(data)
+        self.assertEqual(result, 1, "it should be 1")
 
 if __name__ == "__main__":
     unittest.main()
