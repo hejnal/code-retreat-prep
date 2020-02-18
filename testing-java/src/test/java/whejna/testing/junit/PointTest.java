@@ -61,4 +61,15 @@ public class PointTest {
 
     }
 
+    @Test
+    public void testWillBeAlive() {
+        Grid grid = new Grid(3);
+        Game game = new Game(grid);
+        grid.setAlive(new Point(0,1));
+        grid.setAlive(new Point(1, 2));
+        grid.setAlive(new Point(2, 1));
+        assertEquals(game.willBeAlive(new Point(1, 1)), true);
+
+    }
+
 }

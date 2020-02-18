@@ -44,4 +44,9 @@ public class Game {
         }
         return sum;
     }
+
+    public boolean willBeAlive(Point point) {
+        int count = getCount(point);
+        return count == 3 || (count == 2 && grid.getValue(point));
+    }
 }
