@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-import whejna.testing.HelloWorld;
-
 public class JUnit5Test {
     @Test
     public void justASimpleTest() {
