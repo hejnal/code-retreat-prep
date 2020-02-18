@@ -41,14 +41,16 @@ public class PointTest {
     @Test
     public void testCount() {
         Grid grid = new Grid(5);
-        assertEquals(grid.getCount(new Point(2, 2)), 0);
+        Game game = new Game(grid);
+        assertEquals(game.getCount(new Point(2, 2)), 0);
     }
 
     @Test
     public void testCountMore() {
         Grid grid = new Grid(5);
         grid.setAlive(new Point(2, 1));
-        assertEquals(grid.getCount(new Point(2, 2)), 1);
+        Game game = new Game(grid);
+        assertEquals(game.getCount(new Point(2, 2)), 1);
     }
 
     @Test

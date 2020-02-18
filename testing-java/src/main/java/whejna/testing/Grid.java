@@ -3,7 +3,7 @@ package whejna.testing;
 public class Grid {
 
     private final int size;
-    private boolean[][] grid;
+    public boolean[][] grid;
 
     public Grid(int size) {
         this.size = size;
@@ -28,34 +28,4 @@ public class Grid {
 
     }
 
-    public int getCount(Point point) {
-        int sum= 0;
-        if (grid[point.getX()-1][point.getY() -1]) {
-            sum++;
-        }
-        if (grid[point.getX()][point.getY() -1]) {
-            sum++;
-        }
-        if (grid[point.getX()+1][point.getY() -1]) {
-            sum++;
-        }
-
-        if (grid[point.getX()-1][point.getY()]) {
-            sum++;
-        }
-        if (grid[point.getX()+1][point.getY()]) {
-            sum++;
-        }
-
-        if (grid[point.getX()-1][point.getY() +1]) {
-            sum++;
-        }
-        if (grid[point.getX()][point.getY() +1]) {
-            sum++;
-        }
-        if (grid[point.getX()+1][point.getY() +1]) {
-            sum++;
-        }
-        return sum;
-    }
 }
