@@ -3,6 +3,7 @@ package whejna.testing.junit;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
+import whejna.testing.Game;
 import whejna.testing.Grid;
 import whejna.testing.Point;
 
@@ -48,6 +49,14 @@ public class PointTest {
         Grid grid = new Grid(5);
         grid.setAlive(new Point(2, 1));
         assertEquals(grid.getCount(new Point(2, 2)), 1);
+    }
+
+    @Test
+    public void testGame() {
+        Grid grid = new Grid(3);
+        Game game = new Game(grid);
+        assertEquals(game.getGrid().getSize(), 3);
+
     }
 
 }
