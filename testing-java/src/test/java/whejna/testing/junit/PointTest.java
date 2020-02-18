@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import whejna.testing.Point;
 
 
-public class JUnit5Test {
+public class PointTest {
     @Test
     public void justASimpleTest() {
         Point p = new Point(0, 0);
@@ -16,9 +16,5 @@ public class JUnit5Test {
         assertEquals(0, 0, "it should be 0");
     }
 
-//    @Test
-//    public void testAnotherHelloWorldClass() {
-//        HelloWorld helloWorld = new HelloWorld();
-//        assertEquals("JAMES", helloWorld.sayHelloUpper("James"));
-//    }
+
 }
