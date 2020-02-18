@@ -5,6 +5,8 @@ public class Game {
 
     private final Grid grid;
 
+    final int ITERATIONS = 10;
+
     public Game(Grid grid){
         this.grid = grid;
     }
@@ -48,5 +50,10 @@ public class Game {
     public boolean willBeAlive(Point point) {
         int count = getCount(point);
         return count == 3 || (count == 2 && grid.getValue(point));
+    }
+
+    public void evolve() {
+        // todo evolve
+
     }
 }
