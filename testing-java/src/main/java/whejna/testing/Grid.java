@@ -27,4 +27,8 @@ public class Grid {
         grid[p.getX()][p.getY()] = false;
 
     }
+
+    public short getCount(Point point) {
+        return 0;
+    }
 }

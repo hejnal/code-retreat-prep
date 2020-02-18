@@ -37,4 +37,10 @@ public class PointTest {
         assertEquals(grid.getValue(new Point(0, 0)), false);
     }
 
+    @Test
+    public void testCount() {
+        Grid grid = new Grid(5);
+        assertEquals(grid.getCount(new Point(2, 2)), 0);
+    }
+
 }
