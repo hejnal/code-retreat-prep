@@ -28,5 +28,13 @@ public class PointTest {
         assertEquals(grid.getValue(new Point(1, 0)), false);
     }
 
+    @Test
+    public void testIsAlive() {
+        Grid grid = new Grid(5);
+        grid.setAlive(new Point(0,0));
+        assertEquals(grid.getValue(new Point(0, 0)), true);
+        grid.setDead(new Point(0,0));
+        assertEquals(grid.getValue(new Point(0, 0)), false);
+    }
 
 }

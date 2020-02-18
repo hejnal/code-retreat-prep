@@ -17,4 +17,14 @@ public class Grid {
     public boolean getValue(Point point) {
         return grid[point.getX()][point.getY()];
     }
+
+    public void setAlive(Point p) {
+        grid[p.getX()][p.getY()] = true;
+
+    }
+
+    public void setDead(Point p) {
+        grid[p.getX()][p.getY()] = false;
+
+    }
 }
