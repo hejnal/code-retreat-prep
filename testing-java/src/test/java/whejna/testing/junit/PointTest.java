@@ -22,6 +22,11 @@ public class PointTest {
         Grid grid = new Grid(5);
         assertEquals(grid.getSize(), 5);
     }
+    @Test
+    public void testGrid() {
+        Grid grid = new Grid(5);
+        assertEquals(grid.getValue(new Point(1, 0)), false);
+    }
 
 
 }
