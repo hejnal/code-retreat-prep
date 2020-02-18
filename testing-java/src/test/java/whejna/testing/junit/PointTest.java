@@ -43,4 +43,11 @@ public class PointTest {
         assertEquals(grid.getCount(new Point(2, 2)), 0);
     }
 
+    @Test
+    public void testCountMore() {
+        Grid grid = new Grid(5);
+        grid.setAlive(new Point(2, 1));
+        assertEquals(grid.getCount(new Point(2, 2)), 1);
+    }
+
 }

@@ -28,7 +28,34 @@ public class Grid {
 
     }
 
-    public short getCount(Point point) {
-        return 0;
+    public int getCount(Point point) {
+        int sum= 0;
+        if (grid[point.getX()-1][point.getY() -1]) {
+            sum++;
+        }
+        if (grid[point.getX()][point.getY() -1]) {
+            sum++;
+        }
+        if (grid[point.getX()+1][point.getY() -1]) {
+            sum++;
+        }
+
+        if (grid[point.getX()-1][point.getY()]) {
+            sum++;
+        }
+        if (grid[point.getX()+1][point.getY()]) {
+            sum++;
+        }
+
+        if (grid[point.getX()-1][point.getY() +1]) {
+            sum++;
+        }
+        if (grid[point.getX()][point.getY() +1]) {
+            sum++;
+        }
+        if (grid[point.getX()+1][point.getY() +1]) {
+            sum++;
+        }
+        return sum;
     }
 }
